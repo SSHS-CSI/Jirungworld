@@ -119,7 +119,7 @@ const subjects = [{
                 end: 4
             }],
             teacher: "노창균",
-            students: ["최서영", "김하늘", "임나"],
+            students: ["최서영", "김하늘", "임유나"],
             assignments: []
         }]
     }, {
