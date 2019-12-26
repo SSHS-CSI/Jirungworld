@@ -82,6 +82,45 @@ const subjects = [{
             teacher: "노창균",
             students: ["김성민", "이창민", "김시환"],
             assignments: []
+        }, {
+            times: [{
+                weekday: 4,
+                start: 1,
+                end: 2
+            }, {
+                weekday: 5,
+                start: 3,
+                end: 4
+            }],
+            teacher: "노창균",
+            students: ["안준서", "박정환", "권현우"],
+            assignments: []
+        }, {
+            times: [{
+                weekday: 1,
+                start: 5,
+                end: 6
+            }, {
+                weekday: 4,
+                start: 3,
+                end: 4
+            }],
+            teacher: "노창균",
+            students: ["유다진", "윤석규", "정명우"],
+            assignments: []
+        }, {
+            times: [{
+                weekday: 1,
+                start: 3,
+                end: 4
+            }, {
+                weekday: 5,
+                start: 3,
+                end: 4
+            }],
+            teacher: "노창균",
+            students: ["최서영", "김하늘", "임나"],
+            assignments: []
         }]
     }, {
         name: "미적분학 I",
