@@ -20,11 +20,21 @@ module.exports = ({
                 <TableRow>
                     <TableCell component="th" scope="row" variant="head">아이디
                     </TableCell>
-                    <TextField id="standard-basic" label="Standard" />
+                    <TextField
+                    id="standard-basic"
+                    label="Id"
+                    error={this.data== "" ? true : false }
+                    helperText="Please input"
+                    />
                 </TableRow>
                 <TableRow>
                     <TableCell component="th" scope="row" variant="head">비밀번호</TableCell>
-                    <TextField id="standard-basic" label="Standard" />
+                    <TextField
+                    id="standard-basic"
+                    label="Password"
+                    error={this.data == "" ? true : false }
+                    helperText="Please input"
+                    />
                 </TableRow>
             </TableBody>
         </Table>

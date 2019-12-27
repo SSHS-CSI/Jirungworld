@@ -13,6 +13,7 @@ const Typography = require("@material-ui/core/Typography").default;
 const SubjectIcon = require("@material-ui/icons/Subject").default;
 const ClassIcon = require("@material-ui/icons/Class").default;
 const AssignmentIcon = require("@material-ui/icons/Assignment").default;
+const FoodIcon = require("@material-ui/icons/fastfood").default;
 import StarBorder from '@material-ui/icons/StarBorder';
 import Collapse from '@material-ui/core/Collapse';
 
@@ -65,6 +66,12 @@ module.exports = ({
                         <AssignmentIcon />
                     </ListItemIcon>
                     <ListItemText primary="과제" />
+                </ListItem>
+                <ListItem button >
+                    <ListItemIcon>
+                        <FoodIcon />
+                    </ListItemIcon>
+                    <ListItemText primary="급식 메뉴" />
                 </ListItem>
             </List>
         </Drawer>
