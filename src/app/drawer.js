@@ -71,7 +71,7 @@ module.exports = ({
                     <ListItemIcon>
                         <FoodIcon />
                     </ListItemIcon>
-                    <ListItemText primary="급식 메뉴" />
+                    <ListItemText primary="급식메뉴" />
                 </ListItem>
             </List>
         </Drawer>

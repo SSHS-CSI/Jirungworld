@@ -367,7 +367,7 @@ const App = () => {
                 open={isLoginDialogOpen} onClose={() => setIsLoginDialogOpen(false)}
                 logindialog={{
                     Id: "admin",
-                    Password: "admin2"
+                    Password: "admin1"
                 }} />
             <FoodmenuDialog
                 open={isFoodmenuDialogOpen}
