@@ -18,6 +18,7 @@ const Assignment = require("./assignment.js");
 const LectureSelector = require("./lecture-selector.js");
 const TimeTable = require("./time-table.js");
 const LoginDialog = require("./logindialog.js");
+const FoodmenuDialog = require("./foodmenu.js");
 
 const useStyles = makeStyles(theme => ({
     root: {
@@ -329,6 +330,7 @@ const App = () => {
     const [isAssignmentDialogOpen, setIsAssignmentDialogOpen] = useState(false);
     const [timeTable, setTimeTable] = useState([]);
     const [isLoginDialogOpen, setIsLoginDialogOpen] = useState(false);
+    const [isFoodmenuDialogOpen, setFoodmenuDialogOpen] = useState(false);
 
     return (
         <div className={classes.root}>
@@ -342,6 +344,7 @@ const App = () => {
               onClose={() => setIsDrawerOpen(false)}
               onAssignmentClick={() => setIsAssignmentDialogOpen(true)}
               onClassClick={() => setIsClassDialogOpen(true)}
+              onFoodmenuClick={() => setFoodmenuDialogOpen(true)}
             />
             <Class
                 title="객체지향" open={isClassDialogOpen}
@@ -365,6 +368,15 @@ const App = () => {
                 logindialog={{
                     Id: "admin",
                     Password: "admin2"
+                }} />
+            <FoodmenuDialog
+                open={isFoodmenuDialogOpen}
+                onClose={() => setFoodmenuDialogOpen(false)}
+
+                foodmenu={{
+                  breakfast: "풀떼기",
+                  lunch: "고기",
+                  dinner: "면"
                 }} />
             <Fab color="primary" className={classes.editIcon} onClick={() => setIsEditMode(isEditMode => !isEditMode)}>
                 {isEditMode ? <ClearIcon /> : <EditIcon />}
