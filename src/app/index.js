@@ -17,6 +17,7 @@ const Class = require("./class.js");
 const Assignment = require("./assignment.js");
 const LectureSelector = require("./lecture-selector.js");
 const TimeTable = require("./time-table.js");
+const LoginDialog = require("./logindialog.js");
 
 const useStyles = makeStyles(theme => ({
     root: {
@@ -327,11 +328,15 @@ const App = () => {
     const [isClassDialogOpen, setIsClassDialogOpen] = useState(false);
     const [isAssignmentDialogOpen, setIsAssignmentDialogOpen] = useState(false);
     const [timeTable, setTimeTable] = useState([]);
+    const [isLoginDialogOpen, setIsLoginDialogOpen] = useState(false);
 
     return (
         <div className={classes.root}>
             <CssBaseline />
-            <AppBar onMenuClick={() => setIsDrawerOpen(true)} />
+            <AppBar
+              onMenuClick={() => setIsDrawerOpen(true)}
+              toggleLoginDialog={() => setIsLoginDialogOpen(true)}
+            />
             <Drawer open={isDrawerOpen} onClose={() => setIsDrawerOpen(false)} />
             <Class
                 title="객체지향" open={isClassDialogOpen}
@@ -347,6 +352,12 @@ const App = () => {
                     content: "연습문제 1의 3번 문제부터 16번 문제까지 풀기",
                     deadline: new Date("Sun Jul 30 2019"),
                     author: "조성빈"
+                }} />
+            <LoginDialog
+                open={isLoginDialogOpen} onClose={() => setIsLoginDialogOpen(false)}
+                logindialog={{
+                    Id: "admin",
+                    Password: "admin2"
                 }} />
             <Fab color="primary" className={classes.editIcon} onClick={() => setIsEditMode(isEditMode => !isEditMode)}>
                 {isEditMode ? <ClearIcon /> : <EditIcon />}

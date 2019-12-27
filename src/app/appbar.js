@@ -15,7 +15,7 @@ const useStyles = makeStyles(theme => ({
                                mainBarTitle : {flexGrow : 1}
                              }));
 
-module.exports = ({onMenuClick, ...props}) => {
+module.exports = ({onMenuClick, toggleLoginDialog,...props}) => {
   const classes = useStyles();
 
   return (
@@ -25,7 +25,7 @@ module.exports = ({onMenuClick, ...props}) => {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" className={classes.mainBarTitle}>Jirung World</Typography>
-          <IconButton edge="end" color="inherit" className={classes.menu} onClick={onMenuClick}>
+          <IconButton edge="end" color="inherit" className={classes.menu} onClick={toggleLoginDialog}>
           <AccountIcon />
           </IconButton>
         </Toolbar>
