@@ -341,6 +341,7 @@ const App = () => {
               open={isDrawerOpen}
               onClose={() => setIsDrawerOpen(false)}
               onAssignmentClick={() => setIsAssignmentDialogOpen(true)}
+              onClassClick={() => setIsClassDialogOpen(true)}
             />
             <Class
                 title="객체지향" open={isClassDialogOpen}
@@ -348,7 +349,9 @@ const App = () => {
                 students={["조성빈", "신기준", "권현우"]} assignments={[{
                     title: "연습문제 1",
                     deadline: new Date("Sun Jul 30 2019")
-                }]} />
+                }]}
+
+            />
             <Assignment
                 open={isAssignmentDialogOpen} title="과제" onClose={() => setIsAssignmentDialogOpen(false)}
                 assignment={{

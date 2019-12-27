@@ -34,7 +34,7 @@ const useStyles = makeStyles(theme => ({
 }));
 
 module.exports = ({
-    open, onClose, onAssignmentClick, ...props
+    open, onClose, onAssignmentClick, onClassClick, ...props
 }) => {
     const classes = useStyles();
     return (
@@ -54,7 +54,7 @@ module.exports = ({
                     <ListItemText primary="과목" />
 
                 </ListItem>
-                <ListItem button>
+                <ListItem button onClick={onClassClick}>
                     <ListItemIcon>
                         <ClassIcon />
                     </ListItemIcon>
