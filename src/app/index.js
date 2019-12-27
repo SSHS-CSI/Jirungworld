@@ -337,7 +337,11 @@ const App = () => {
               onMenuClick={() => setIsDrawerOpen(true)}
               toggleLoginDialog={() => setIsLoginDialogOpen(true)}
             />
-            <Drawer open={isDrawerOpen} onClose={() => setIsDrawerOpen(false)} />
+            <Drawer
+              open={isDrawerOpen}
+              onClose={() => setIsDrawerOpen(false)}
+              onAssignmentClick={() => setIsAssignmentDialogOpen(true)}
+            />
             <Class
                 title="객체지향" open={isClassDialogOpen}
                 onClose={() => setIsClassDialogOpen(false)} teacher="박미영"

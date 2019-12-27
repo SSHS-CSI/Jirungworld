@@ -34,7 +34,7 @@ const useStyles = makeStyles(theme => ({
 }));
 
 module.exports = ({
-    open, onClose, ...props
+    open, onClose, onAssignmentClick, ...props
 }) => {
     const classes = useStyles();
     return (
@@ -52,6 +52,7 @@ module.exports = ({
                         <SubjectIcon />
                     </ListItemIcon>
                     <ListItemText primary="과목" />
+
                 </ListItem>
                 <ListItem button>
                     <ListItemIcon>
@@ -59,7 +60,7 @@ module.exports = ({
                     </ListItemIcon>
                     <ListItemText primary="수업" />
                 </ListItem>
-                <ListItem button>
+                <ListItem button onClick={onAssignmentClick}>
                     <ListItemIcon>
                         <AssignmentIcon />
                     </ListItemIcon>
