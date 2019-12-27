@@ -19,6 +19,7 @@ const LectureSelector = require("./lecture-selector.js");
 const TimeTable = require("./time-table.js");
 const LoginDialog = require("./logindialog.js");
 const FoodmenuDialog = require("./foodmenu.js");
+const SubDialog = require("./sub.js");
 
 const useStyles = makeStyles(theme => ({
     root: {
@@ -331,6 +332,8 @@ const App = () => {
     const [timeTable, setTimeTable] = useState([]);
     const [isLoginDialogOpen, setIsLoginDialogOpen] = useState(false);
     const [isFoodmenuDialogOpen, setFoodmenuDialogOpen] = useState(false);
+    const [isSubDialogOpen, setSubDialogOpen] = useState(false);
+
 
     return (
         <div className={classes.root}>
@@ -345,6 +348,7 @@ const App = () => {
               onAssignmentClick={() => setIsAssignmentDialogOpen(true)}
               onClassClick={() => setIsClassDialogOpen(true)}
               onFoodmenuClick={() => setFoodmenuDialogOpen(true)}
+              onSubClick={() => setSubDialogOpen(true)}
             />
             <Class
                 title="객체지향" open={isClassDialogOpen}
@@ -378,6 +382,10 @@ const App = () => {
                   lunch: "고기",
                   dinner: "면"
                 }} />
+              <SubDialog
+                  open={isSubDialogOpen}
+                  onClose={() => setSubDialogOpen(false)}
+                  />
             <Fab color="primary" className={classes.editIcon} onClick={() => setIsEditMode(isEditMode => !isEditMode)}>
                 {isEditMode ? <ClearIcon /> : <EditIcon />}
             </Fab>

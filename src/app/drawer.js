@@ -35,7 +35,7 @@ const useStyles = makeStyles(theme => ({
 }));
 
 module.exports = ({
-    open, onClose, onAssignmentClick, onClassClick, onFoodmenuClick, ...props
+    open, onClose, onAssignmentClick, onClassClick, onFoodmenuClick, onSubClick, ...props
 }) => {
     const classes = useStyles();
     return (
@@ -48,7 +48,7 @@ module.exports = ({
                     </div>
                 </ListItem>
                 <Divider />
-                <ListItem button>
+                <ListItem button onClick={onSubClick}>
                     <ListItemIcon>
                         <SubjectIcon />
                     </ListItemIcon>
